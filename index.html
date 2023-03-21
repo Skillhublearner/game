@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tic Tac Toe By SKILLHUB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <style>
+    
+        .box{
+            height: 150px;
+            width: 100%;
+            border: 2px solid gray;
+            margin-top:10px;
+            display: flex;
+            justify-content: center ;
+            align-items: center;
+            border: 5px solid black ;
+            /* border-top-color: 75px; */
+            /* background-color:aqua; */
+        }
+         
+    </style>
+  </head>
+  <body>
+    <!-- .container>.row>.col-sm-6.offset-sm-3>.card>.card-body>input.form-control*2+button.btn-primary.w-100>{start game} -->
+    <div class="container" id="playercard">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <div class="card">
+                    <div class="card-header">Enter Names</div>
+                        <div class="card-body">
+                            <input type="text" placeholder="Enter Your Eame" class="form-control" id="p1"> <br>
+                            <input type="text" placeholder="Enter Your Eame" class="form-control" id="p2"> <br>
+                            <button onclick="startgame()" class="btn btn-primary w-100">Start Game</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <!-- .container>.row>.col-sm-8.offset-sm-2>.card>card-header+.card-body -->
+  <div class="container my-5"id="output"></div>
+    <div class="container d-none" id="gamecard">
+        <div class="row">
+           <div class="col-sm-8 offset-sm-2">
+               <div class="card">
+                   <div class="card-header">Tic Tac Toe</div>
+                       <div class="card-body">
+                        <!-- .row>.col-sm-3*4>.card>.card-body>.d-felx.justify-content-between>h1+span -->
+                         <div class="row">
+                            <div class="col-sm-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-felx justify-content-between">
+                                            <h6 id="player1">player1</h6>
+                                            <strong id="player1WinCount">0</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-felx justify-content-between">
+                                        <h6 id="player2">player2</h6>
+                                        <strong id="player2WinCount">0</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="col-sm-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-felx justify-content-between">
+                                          <h6>drow</h6>
+                                          <strong id="drowCount">0</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                            <div class="col-sm-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-felx justify-content-between">
+                                          <h6>Total</h6>
+                                          <strong id="totalcount">0</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                        <!-- .row>.col-4*9>.box>{$} -->
+                        <div class="row">
+                            <div class="col-4">
+                                <div onclick="game('b1')" id="b1" class="box">1</div>
+                            </div>
+                            <div class="col-4">
+                                <div onclick="game('b2')" id="b2"  class="box">2</div>
+                            </div>
+                            <div class="col-4">
+                                <div onclick="game('b3')" id="b3"  class="box">3</div>
+                            </div>
+                            <div  class="col-4">
+                                <div onclick="game('b4')" id="b4" class="box">4</div>
+                            </div>
+                            <div class="col-4">
+                                <div onclick="game('b5')" id="b5" class="box">5</div>
+                            </div>
+                            <div class="col-4">
+                                <div onclick="game('b6')" id="b6" class="box">6</div>
+                            </div>
+                            <div class="col-4">
+                                <div onclick="game('b7')" id="b7" class="box">7</div>
+                            </div>
+                            <div class="col-4">
+                                <div onclick="game('b8')" id="b8"  class="box">8</div>
+                            </div>
+                            <div class="col-4">
+                                <div onclick="game('b9')" id="b9" class="box">9</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+
+<!-- // const isBox1red =document.getElementById("b1").classList.contains("bg-danger")
+// const isBox2red =document.getElementById("b2").classList.contains("bg-danger")
+// const isBox3red =document.getElementById("b3").classList.contains("bg-danger")
+// if ( isBox1red && isBox2red && isBox3red ) {
+//     console.log(" 🎉 red is winner")
+// }
+ // const isBox1Green =document.getElementById("b1").classList.contains("bg-success")
+// const isBox2Green =document.getElementById("b2").classList.contains("bg-success")
+// const isBox3Green =document.getElementById("b3").classList.contains("bg-success")
+// if ( isBox1red && isBox2red && isBox3red ) {
+//     console.log(" 🎉 Green is winner")
+// } -->
+<!-- \asicrons code -->
+<!-- native 
+swift
+objective c
+hybrid
+react native jsionic 
+jsxamirin
+c#
+pwa
+prograsive web app
+js -->
